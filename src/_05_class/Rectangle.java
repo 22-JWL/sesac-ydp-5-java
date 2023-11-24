@@ -1,6 +1,8 @@
 package _05_class;
 
-public class Rectangle {
+import java.util.Scanner;
+
+public class Rectangle{
 
     public int width;
     public int height;
@@ -10,7 +12,31 @@ public class Rectangle {
         this.height = height;
     }
 
-    public int area() {
-        return this.width * this.height;
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public void area(){
+
+        Scanner scan = new Scanner(System.in);
+
+        setWidth(scan.nextInt());
+        setHeight(scan.nextInt());
+
+        System.out.println("가로는 : " + getWidth());
+        System.out.println("세로는 : " + getHeight());
+        System.out.println("넓이는 : " + (width*height));
     }
 }
